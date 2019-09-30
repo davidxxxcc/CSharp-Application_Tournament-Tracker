@@ -12,4 +12,3 @@ namespace TrackerLibrary
         public List<List<MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>();
     }
 }
- 
