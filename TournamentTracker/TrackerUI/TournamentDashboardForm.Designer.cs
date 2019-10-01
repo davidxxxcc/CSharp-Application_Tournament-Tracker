@@ -41,7 +41,7 @@
             this.createPrizeLabel.AutoSize = true;
             this.createPrizeLabel.Font = new System.Drawing.Font("Segoe UI Light", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createPrizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.createPrizeLabel.Location = new System.Drawing.Point(136, 29);
+            this.createPrizeLabel.Location = new System.Drawing.Point(146, 29);
             this.createPrizeLabel.Name = "createPrizeLabel";
             this.createPrizeLabel.Size = new System.Drawing.Size(385, 50);
             this.createPrizeLabel.TabIndex = 14;
@@ -50,9 +50,9 @@
             // loadExistingTournamentDropDown
             // 
             this.loadExistingTournamentDropDown.FormattingEnabled = true;
-            this.loadExistingTournamentDropDown.Location = new System.Drawing.Point(149, 193);
+            this.loadExistingTournamentDropDown.Location = new System.Drawing.Point(177, 195);
             this.loadExistingTournamentDropDown.Name = "loadExistingTournamentDropDown";
-            this.loadExistingTournamentDropDown.Size = new System.Drawing.Size(381, 38);
+            this.loadExistingTournamentDropDown.Size = new System.Drawing.Size(323, 38);
             this.loadExistingTournamentDropDown.TabIndex = 21;
             // 
             // loadExistingTournamentLabel
@@ -60,7 +60,7 @@
             this.loadExistingTournamentLabel.AutoSize = true;
             this.loadExistingTournamentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadExistingTournamentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.loadExistingTournamentLabel.Location = new System.Drawing.Point(168, 159);
+            this.loadExistingTournamentLabel.Location = new System.Drawing.Point(174, 143);
             this.loadExistingTournamentLabel.Name = "loadExistingTournamentLabel";
             this.loadExistingTournamentLabel.Size = new System.Drawing.Size(329, 31);
             this.loadExistingTournamentLabel.TabIndex = 20;
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(667, 480);
+            this.ClientSize = new System.Drawing.Size(668, 628);
             this.Controls.Add(this.createTournamentButton);
             this.Controls.Add(this.loadTournamentButton);
             this.Controls.Add(this.loadExistingTournamentDropDown);
