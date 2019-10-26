@@ -3,8 +3,20 @@ namespace TrackerLibrary.Models
 {
     public class MatchupEntryModel
     {
-        public TeamModel TeamingCompleting { get; set; }
+        /// <summary>
+        /// Represents one team in the matchup.
+        /// </summary>
+        public TeamModel TeamCompleting { get; set; }
+
+        /// <summary>
+        /// Represents the score for this particular team.
+        /// </summary>
         public double Score { get; set; }
+
+        /// <summary>
+        /// Represents the matchup that this team came
+        /// from as a winner.
+        /// </summary>
         public MatchupModel ParentMatchup  { get; set; }
 
     }
