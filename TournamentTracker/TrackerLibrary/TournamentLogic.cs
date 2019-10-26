@@ -14,6 +14,11 @@ namespace TrackerLibrary
         // Create our first round of matchups
         // Create everyround after that - 8 matchups - 4 matchups - 2 matchups - 1 matchup
 
+        private static List<TeamModel> RandomizeTeamOrder(List<TeamModel> teams)
+        {
+            return teams.OrderBy(x => Guid.NewGuid()).ToList();
+        }
+
         public static void CreateRounds(TournamentModel model)
         {
             List<TeamModel> randomizedTeams = RandomizeTeamOrder(model.EnteredTeams);
@@ -53,6 +58,7 @@ namespace TrackerLibrary
             }
         }
 
+
         private static List<MatchupModel> CreateFirstRound(int byes, List<TeamModel> teams)
         {
             List<MatchupModel> output = new List<MatchupModel>();
@@ -60,7 +66,7 @@ namespace TrackerLibrary
 
             foreach (TeamModel team in teams)
             {
-                curr.Entries.Add(new MatchupEntryModel { TeamCompleting = team });
+                curr.Entries.Add(new MatchupEntryModel { TeamCompeting = team });
 
                 if (byes > 0 || curr.Entries.Count > 1)
                 {
@@ -95,7 +101,7 @@ namespace TrackerLibrary
 
         private static int FindNumberOfRounds(int teamCount)
         {
-            int output = 0;
+            int output = 1;
             int val = 2;
 
             while (val < teamCount)
@@ -110,9 +116,6 @@ namespace TrackerLibrary
             return output;
         }
 
-        private static List<TeamModel> RandomizeTeamOrder(List<TeamModel> teams)
-        {
-            return teams.OrderBy(x => Guid.NewGuid()).ToList();
-        }
+
     }
 }
