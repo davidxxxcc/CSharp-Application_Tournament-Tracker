@@ -58,7 +58,6 @@ namespace TrackerLibrary
             }
         }
 
-
         private static List<MatchupModel> CreateFirstRound(int byes, List<TeamModel> teams)
         {
             List<MatchupModel> output = new List<MatchupModel>();

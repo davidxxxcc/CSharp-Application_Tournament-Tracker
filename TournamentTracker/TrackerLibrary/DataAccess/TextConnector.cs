@@ -96,7 +96,7 @@ namespace TrackerLibrary.DataAccess
 
             model.Id = currentId;
 
-            model.SaveRoundsToFiles(MatchupFile, MatchupEntryFile);
+            model.SaveRoundsToFiles();
 
             tournaments.Add(model);
 
