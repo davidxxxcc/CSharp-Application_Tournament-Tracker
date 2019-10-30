@@ -128,9 +128,12 @@ namespace TrackerLibrary.DataAccess.TextHelpers
 
                 string[] prizeIds = cols[4].Split('|');
 
-                foreach (string id in prizeIds)
+                if (cols[4].Length > 0)
                 {
-                    tm.Prizes.Add(prizes.Where(x => x.Id == int.Parse(id)).First());
+                    foreach (string id in prizeIds)
+                    {
+                        tm.Prizes.Add(prizes.Where(x => x.Id == int.Parse(id)).First());
+                    } 
                 }
 
                 // Capture Rounds information
@@ -411,12 +414,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             List<string> lines = new List<string>();
             foreach (TournamentModel tm in models)
             {
-                lines.Add($@"{  tm.Id },
-                            { tm.TournamentName },
-                            { tm.EntryFee },
-                            { ConvertTeamListToString(tm.EnteredTeams) },
-                            { ConvertPrizeListToString(tm.Prizes) },
-                            { ConvertRoundListToString(tm.Rounds) }");
+                lines.Add($@"{  tm.Id },{ tm.TournamentName },{ tm.EntryFee },{ ConvertTeamListToString(tm.EnteredTeams) },{ ConvertPrizeListToString(tm.Prizes) },{ ConvertRoundListToString(tm.Rounds) }");
             }
 
             File.WriteAllLines(fileName.FullFilePath(), lines);
