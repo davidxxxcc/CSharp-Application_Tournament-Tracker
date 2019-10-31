@@ -85,6 +85,7 @@
             this.roundDropDown.Name = "roundDropDown";
             this.roundDropDown.Size = new System.Drawing.Size(243, 21);
             this.roundDropDown.TabIndex = 3;
+            this.roundDropDown.SelectedIndexChanged += new System.EventHandler(this.RoundDropDown_SelectedIndexChanged);
             // 
             // unplayedCheckBox
             // 
@@ -107,6 +108,7 @@
             this.matchupListBox.Name = "matchupListBox";
             this.matchupListBox.Size = new System.Drawing.Size(342, 249);
             this.matchupListBox.TabIndex = 5;
+            this.matchupListBox.SelectedIndexChanged += new System.EventHandler(this.MatchupListBox_SelectedIndexChanged);
             // 
             // teamOneName
             // 
@@ -218,7 +220,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TournamentViewerForm";
             this.Text = "Tournament Viewer";
-            this.Load += new System.EventHandler(this.TournamentViewerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
