@@ -60,6 +60,7 @@ namespace TrackerUI
                 p.CellphoneNumber = cellphoneValue.Text;
 
                 GlobalConfig.Connection.CreatePerson(p);
+
                 selectedTeamMembers.Add(p);
                 WireUpLists();
                 firstNameValue.Text = "";
